@@ -1,0 +1,24 @@
+---
+abstract: 'NativeTrait-like behavior for Moo.'
+author:
+  - 'Matthew Phillips <mattp@cpan.org>'
+build_requires:
+  Class::Method::Modifiers: 0
+  Data::Perl: 0.002006
+  Module::Runtime: 0
+  Moo: 1.001000
+  Role::Tiny: 0
+  Test::Exception: 0
+  Test::More: 0
+configure_requires:
+  ExtUtils::MakeMaker: 6.30
+dynamic_config: 0
+generated_by: 'Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: MooX-HandlesVia
+resources:
+  repository: git://github.com/mattp-/MooX-HandlesVia.git
+version: 0.001000
