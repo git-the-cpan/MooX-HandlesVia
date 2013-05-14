@@ -12,11 +12,7 @@ my %WriteMakefileArgs = (
   "ABSTRACT" => "NativeTrait-like behavior for Moo.",
   "AUTHOR" => "Matthew Phillips <mattp\@cpan.org>",
   "BUILD_REQUIRES" => {
-    "Class::Method::Modifiers" => 0,
-    "Data::Perl" => "0.002006",
-    "Module::Runtime" => 0,
-    "Moo" => "1.001000",
-    "Role::Tiny" => 0,
+    "MooX::Types::MooseLike::Base" => "0.23",
     "Test::Exception" => 0,
     "Test::More" => 0
   },
@@ -27,8 +23,14 @@ my %WriteMakefileArgs = (
   "EXE_FILES" => [],
   "LICENSE" => "perl",
   "NAME" => "MooX::HandlesVia",
-  "PREREQ_PM" => {},
-  "VERSION" => "0.001000",
+  "PREREQ_PM" => {
+    "Class::Method::Modifiers" => 0,
+    "Data::Perl" => "0.002006",
+    "Module::Runtime" => 0,
+    "Moo" => "1.002000",
+    "Role::Tiny" => 0
+  },
+  "VERSION" => "0.001001",
   "test" => {
     "TESTS" => "t/*.t t/from-moose/*.t"
   }

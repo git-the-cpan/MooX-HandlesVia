@@ -1,6 +1,6 @@
-package MooX::HandlesVia;
+  package MooX::HandlesVia;
 {
-  $MooX::HandlesVia::VERSION = '0.001000';
+  $MooX::HandlesVia::VERSION = '0.001001';
 }
 # ABSTRACT: NativeTrait-like behavior for Moo.
 
@@ -16,6 +16,7 @@ my %RESERVED = (
   'Number' => 'Data::Perl::Number::MooseLike',
   'Code' => 'Data::Perl::Code',
 );
+my %REVERSED = reverse %RESERVED;
 
 sub import {
   my ($class) = @_;
@@ -36,11 +37,13 @@ sub process_has {
   my $handles = $opts{handles};
   return ($name, %opts) if not $handles or ref $handles ne 'HASH';
 
-  if (my $via = $opts{handles_via}) {
+  if (my $via = delete $opts{handles_via}) {
     # try to load the reserved mapping, if it exists, else the full name
     $via = $RESERVED{$via} || $via;
-
     require_module($via);
+
+    # clone handles for HandlesMoose support
+    my %handles_clone = %$handles;
 
     while (my ($target, $delegation) = each %$handles) {
       # if passed an array, handle the curry
@@ -56,12 +59,27 @@ sub process_has {
         }
       }
     }
+
+    # install our support for moose upgrading of class/role
+    # we deleted the handles_via key above, but install it as a native trait
+    my $inflator = $opts{moosify};
+    $opts{moosify} = sub {
+      my ($spec) = @_;
+
+      $spec->{handles} = \%handles_clone;
+      $spec->{traits} = [$REVERSED{$via} || $via];
+
+      # pass through if needed
+      $inflator->($spec) if ref($spec) eq 'CODE';
+    };
   }
 
   ($name, %opts);
 }
 
 1;
+
+
 
 =pod
 
@@ -71,7 +89,7 @@ MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 
@@ -193,6 +211,7 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
 
 __END__
 ==pod

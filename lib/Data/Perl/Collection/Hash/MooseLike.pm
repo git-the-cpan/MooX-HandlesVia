@@ -1,6 +1,6 @@
 package Data::Perl::Collection::Hash::MooseLike;
 {
-  $Data::Perl::Collection::Hash::MooseLike::VERSION = '0.001000';
+  $Data::Perl::Collection::Hash::MooseLike::VERSION = '0.001001';
 }
 
 # ABSTRACT: Collection::Hash subclass that simulates Moose's native traits.
@@ -24,6 +24,8 @@ around 'set', 'get', 'delete' => sub {
 
 1;
 
+
+
 =pod
 
 =head1 NAME
@@ -32,7 +34,7 @@ Data::Perl::Collection::Hash::MooseLike - Collection::Hash subclass that simulat
 
 =head1 VERSION
 
-version 0.001000
+version 0.001001
 
 =head1 SYNOPSIS
 
@@ -100,6 +102,7 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
+
 
 __END__
 ==pod
