@@ -2,7 +2,7 @@ NAME
     MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 VERSION
-    version 0.001002
+    version 0.001003
 
 SYNOPSIS
       {

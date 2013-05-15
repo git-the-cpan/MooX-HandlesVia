@@ -1,6 +1,6 @@
   package MooX::HandlesVia;
 {
-  $MooX::HandlesVia::VERSION = '0.001002';
+  $MooX::HandlesVia::VERSION = '0.001003';
 }
 # ABSTRACT: NativeTrait-like behavior for Moo.
 
@@ -38,6 +38,8 @@ sub process_has {
   return ($name, %opts) if not $handles or ref $handles ne 'HASH';
 
   if (my $via = delete $opts{handles_via}) {
+    $via = ref $via eq 'ARRAY' ? $via->[0] : $via;
+
     # try to load the reserved mapping, if it exists, else the full name
     $via = $RESERVED{$via} || $via;
     require_module($via);
@@ -89,7 +91,7 @@ MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 =head1 VERSION
 
-version 0.001002
+version 0.001003
 
 =head1 SYNOPSIS
 
