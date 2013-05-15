@@ -1,6 +1,6 @@
 package Data::Perl::Collection::Array::MooseLike;
 {
-  $Data::Perl::Collection::Array::MooseLike::VERSION = '0.001001';
+  $Data::Perl::Collection::Array::MooseLike::VERSION = '0.001002';
 }
 
 # ABSTRACT: Collection::Array subclass that simulates Moose's native traits.
@@ -17,7 +17,7 @@ around 'splice' => sub {
     my @res = $orig->(@_);
 
     # support both class instance method invocation style
-    @res = blessed($res[0]) ? $res[0]->flatten : @res;
+    @res = blessed($res[0]) && $res[0]->isa('Data::Perl::Collection::Array') ? $res[0]->flatten : @res;
 
     wantarray ? @res : $res[-1];
 };
@@ -34,7 +34,7 @@ Data::Perl::Collection::Array::MooseLike - Collection::Array subclass that simul
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 

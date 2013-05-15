@@ -1,6 +1,6 @@
   package MooX::HandlesVia;
 {
-  $MooX::HandlesVia::VERSION = '0.001001';
+  $MooX::HandlesVia::VERSION = '0.001002';
 }
 # ABSTRACT: NativeTrait-like behavior for Moo.
 
@@ -89,7 +89,7 @@ MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 =head1 VERSION
 
-version 0.001001
+version 0.001002
 
 =head1 SYNOPSIS
 
