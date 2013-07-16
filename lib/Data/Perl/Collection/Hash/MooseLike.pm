@@ -1,6 +1,6 @@
 package Data::Perl::Collection::Hash::MooseLike;
 {
-  $Data::Perl::Collection::Hash::MooseLike::VERSION = '0.001003';
+  $Data::Perl::Collection::Hash::MooseLike::VERSION = '0.001004';
 }
 
 # ABSTRACT: Collection::Hash subclass that simulates Moose's native traits.
@@ -36,7 +36,7 @@ Data::Perl::Collection::Hash::MooseLike - Collection::Hash subclass that simulat
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 SYNOPSIS
 

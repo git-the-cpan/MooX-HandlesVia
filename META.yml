@@ -9,7 +9,7 @@ build_requires:
 configure_requires:
   ExtUtils::MakeMaker: 6.30
 dynamic_config: 0
-generated_by: 'Dist::Zilla version 4.300030, CPAN::Meta::Converter version 2.120921'
+generated_by: 'Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -19,8 +19,8 @@ requires:
   Class::Method::Modifiers: 0
   Data::Perl: 0.002006
   Module::Runtime: 0
-  Moo: 1.002000
+  Moo: 1.003000
   Role::Tiny: 0
 resources:
   repository: git://github.com/mattp-/MooX-HandlesVia.git
-version: 0.001003
+version: 0.001004

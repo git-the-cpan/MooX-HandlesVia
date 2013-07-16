@@ -1,6 +1,6 @@
 package Data::Perl::Bool::MooseLike;
 {
-  $Data::Perl::Bool::MooseLike::VERSION = '0.001003';
+  $Data::Perl::Bool::MooseLike::VERSION = '0.001004';
 }
 
 # ABSTRACT: data::Perl::Bool subclass that simulates Moose's native traits.
@@ -32,7 +32,7 @@ Data::Perl::Bool::MooseLike - data::Perl::Bool subclass that simulates Moose's n
 
 =head1 VERSION
 
-version 0.001003
+version 0.001004
 
 =head1 SYNOPSIS
 
