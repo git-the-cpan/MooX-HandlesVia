@@ -21,8 +21,13 @@ t/from-moose/trait_code.t
 t/from-moose/trait_hash.t
 t/from-moose/trait_number.t
 t/from-moose/trait_string.t
+t/handlesvia_in_role.t
 t/hash.t
 t/invalid.t
 t/proof_of_concept.t
 t/release-pod-coverage.t
 t/release-pod-syntax.t
+t/unimport/namespace_autoclean.t
+t/unimport/namespace_clean.t
+t/unimport/no_moo.t
+t/unimport/pollution.t

@@ -4,7 +4,7 @@
       "Matthew Phillips <mattp@cpan.org>"
    ],
    "dynamic_config" : 0,
-   "generated_by" : "Dist::Zilla version 4.300034, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Dist::Zilla version 5.006, CPAN::Meta::Converter version 2.133380",
    "license" : [
       "perl_5"
    ],
@@ -51,6 +51,6 @@
          "web" : "https://github.com/mattp-/MooX-HandlesVia"
       }
    },
-   "version" : "0.001004"
+   "version" : "0.001005"
 }
 

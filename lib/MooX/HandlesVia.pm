@@ -1,6 +1,6 @@
   package MooX::HandlesVia;
 {
-  $MooX::HandlesVia::VERSION = '0.001004';
+  $MooX::HandlesVia::VERSION = '0.001005';
 }
 # ABSTRACT: NativeTrait-like behavior for Moo.
 
@@ -26,9 +26,15 @@ sub import {
 
   my $target = caller;
   if(my $has = $target->can('has')) {
-    *{$target.'::has'} = sub {
-      $has->(process_has(@_));
-    }
+      my $newsub = sub {
+          $has->(process_has(@_));
+      };
+      if($target->isa("Moo::Object")){
+          Moo::_install_tracked($target, "has", $newsub);
+      }
+      else{
+          Moo::Role::_install_tracked($target, "has", $newsub);
+      }
   }
 }
 
@@ -81,9 +87,9 @@ sub process_has {
 
 1;
 
-
-
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -91,14 +97,14 @@ MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 =head1 VERSION
 
-version 0.001004
+version 0.001005
 
 =head1 SYNOPSIS
 
   {
     package Hashy;
     use Moo;
-    use MooX::HandleVia;
+    use MooX::HandlesVia;
 
     has hash => (
       is => 'rw',
@@ -113,9 +119,9 @@ version 0.001004
 
   my $h = Hashy->new(hash => { a => 1, b => 2});
 
-  $h->get('b'); # 2
+  $h->get_val('b'); # 2
 
-  $h->set('a', 'BAR'); # sets a to BAR
+  $h->set_val('a', 'BAR'); # sets a to BAR
 
   my @keys = $h->all_keys; # returns a, b
 
@@ -213,7 +219,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 ==pod

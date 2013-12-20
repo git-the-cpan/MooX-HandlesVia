@@ -2,13 +2,13 @@ NAME
     MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 VERSION
-    version 0.001004
+    version 0.001005
 
 SYNOPSIS
       {
         package Hashy;
         use Moo;
-        use MooX::HandleVia;
+        use MooX::HandlesVia;
 
         has hash => (
           is => 'rw',
@@ -23,9 +23,9 @@ SYNOPSIS
 
       my $h = Hashy->new(hash => { a => 1, b => 2});
 
-      $h->get('b'); # 2
+      $h->get_val('b'); # 2
 
-      $h->set('a', 'BAR'); # sets a to BAR
+      $h->set_val('a', 'BAR'); # sets a to BAR
 
       my @keys = $h->all_keys; # returns a, b
 

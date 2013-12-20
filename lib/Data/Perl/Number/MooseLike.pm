@@ -1,6 +1,6 @@
 package Data::Perl::Number::MooseLike;
 {
-  $Data::Perl::Number::MooseLike::VERSION = '0.001004';
+  $Data::Perl::Number::MooseLike::VERSION = '0.001005';
 }
 
 # ABSTRACT: data::Perl::Number subclass that simulates Moose's native traits.
@@ -22,9 +22,9 @@ around @methods => sub {
 
 1;
 
-
-
 =pod
+
+=encoding UTF-8
 
 =head1 NAME
 
@@ -32,7 +32,7 @@ Data::Perl::Number::MooseLike - data::Perl::Number subclass that simulates Moose
 
 =head1 VERSION
 
-version 0.001004
+version 0.001005
 
 =head1 SYNOPSIS
 
@@ -66,7 +66,6 @@ This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
 
 __END__
 ==pod
