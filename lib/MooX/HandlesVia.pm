@@ -1,9 +1,6 @@
   package MooX::HandlesVia;
-{
-  $MooX::HandlesVia::VERSION = '0.001005';
-}
 # ABSTRACT: NativeTrait-like behavior for Moo.
-
+$MooX::HandlesVia::VERSION = '0.001006';
 use strictures 1;
 use Module::Runtime qw/require_module/;
 
@@ -78,7 +75,7 @@ sub process_has {
       $spec->{traits} = [$REVERSED{$via} || $via];
 
       # pass through if needed
-      $inflator->($spec) if ref($spec) eq 'CODE';
+      $inflator->($spec) if ref($inflator) eq 'CODE';
     };
   }
 
@@ -97,7 +94,7 @@ MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 =head1 VERSION
 
-version 0.001005
+version 0.001006
 
 =head1 SYNOPSIS
 
@@ -213,7 +210,7 @@ Matthew Phillips <mattp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Matthew Phillips <mattp@cpan.org>.
+This software is copyright (c) 2015 by Matthew Phillips <mattp@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

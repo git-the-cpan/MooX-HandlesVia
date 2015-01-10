@@ -1,8 +1,5 @@
 package Data::Perl::Collection::Array::MooseLike;
-{
-  $Data::Perl::Collection::Array::MooseLike::VERSION = '0.001005';
-}
-
+$Data::Perl::Collection::Array::MooseLike::VERSION = '0.001006';
 # ABSTRACT: Collection::Array subclass that simulates Moose's native traits.
 
 use strictures 1;
@@ -34,7 +31,7 @@ Data::Perl::Collection::Array::MooseLike - Collection::Array subclass that simul
 
 =head1 VERSION
 
-version 0.001005
+version 0.001006
 
 =head1 SYNOPSIS
 
@@ -82,7 +79,7 @@ Matthew Phillips <mattp@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2013 by Matthew Phillips <mattp@cpan.org>.
+This software is copyright (c) 2015 by Matthew Phillips <mattp@cpan.org>.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.

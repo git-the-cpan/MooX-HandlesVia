@@ -2,7 +2,7 @@ NAME
     MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 VERSION
-    version 0.001005
+    version 0.001006
 
 SYNOPSIS
       {
@@ -96,7 +96,7 @@ AUTHOR
     Matthew Phillips <mattp@cpan.org>
 
 COPYRIGHT AND LICENSE
-    This software is copyright (c) 2013 by Matthew Phillips
+    This software is copyright (c) 2015 by Matthew Phillips
     <mattp@cpan.org>.
 
     This is free software; you can redistribute it and/or modify it under
