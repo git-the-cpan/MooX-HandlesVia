@@ -1,6 +1,6 @@
   package MooX::HandlesVia;
 # ABSTRACT: NativeTrait-like behavior for Moo.
-$MooX::HandlesVia::VERSION = '0.001006';
+$MooX::HandlesVia::VERSION = '0.001007';
 use strictures 1;
 use Module::Runtime qw/require_module/;
 
@@ -94,7 +94,7 @@ MooX::HandlesVia - NativeTrait-like behavior for Moo.
 
 =head1 VERSION
 
-version 0.001006
+version 0.001007
 
 =head1 SYNOPSIS
 

@@ -1,5 +1,5 @@
 package Data::Perl::Collection::Array::MooseLike;
-$Data::Perl::Collection::Array::MooseLike::VERSION = '0.001006';
+$Data::Perl::Collection::Array::MooseLike::VERSION = '0.001007';
 # ABSTRACT: Collection::Array subclass that simulates Moose's native traits.
 
 use strictures 1;
@@ -31,7 +31,7 @@ Data::Perl::Collection::Array::MooseLike - Collection::Array subclass that simul
 
 =head1 VERSION
 
-version 0.001006
+version 0.001007
 
 =head1 SYNOPSIS
 

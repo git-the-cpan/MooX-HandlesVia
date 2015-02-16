@@ -1,5 +1,5 @@
 package Data::Perl::Number::MooseLike;
-$Data::Perl::Number::MooseLike::VERSION = '0.001006';
+$Data::Perl::Number::MooseLike::VERSION = '0.001007';
 # ABSTRACT: data::Perl::Number subclass that simulates Moose's native traits.
 
 use strictures 1;
@@ -29,7 +29,7 @@ Data::Perl::Number::MooseLike - data::Perl::Number subclass that simulates Moose
 
 =head1 VERSION
 
-version 0.001006
+version 0.001007
 
 =head1 SYNOPSIS
 

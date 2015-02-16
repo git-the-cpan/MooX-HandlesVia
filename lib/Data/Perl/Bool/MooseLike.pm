@@ -1,5 +1,5 @@
 package Data::Perl::Bool::MooseLike;
-$Data::Perl::Bool::MooseLike::VERSION = '0.001006';
+$Data::Perl::Bool::MooseLike::VERSION = '0.001007';
 # ABSTRACT: data::Perl::Bool subclass that simulates Moose's native traits.
 
 use strictures 1;
@@ -29,7 +29,7 @@ Data::Perl::Bool::MooseLike - data::Perl::Bool subclass that simulates Moose's n
 
 =head1 VERSION
 
-version 0.001006
+version 0.001007
 
 =head1 SYNOPSIS
 
