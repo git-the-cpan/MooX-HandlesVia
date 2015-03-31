@@ -1,5 +1,5 @@
 package Data::Perl::String::MooseLike;
-$Data::Perl::String::MooseLike::VERSION = '0.001007';
+$Data::Perl::String::MooseLike::VERSION = '0.001008';
 # ABSTRACT: data::Perl::String subclass that simulates Moose's native traits.
 
 use strictures 1;
@@ -29,7 +29,7 @@ Data::Perl::String::MooseLike - data::Perl::String subclass that simulates Moose
 
 =head1 VERSION
 
-version 0.001007
+version 0.001008
 
 =head1 SYNOPSIS
 
